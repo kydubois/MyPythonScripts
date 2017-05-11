@@ -23,7 +23,7 @@ except:
     quit()
 
 
-while i in rang(cot):
+while i in range(cot):
     html = urllib.request.urlopen(url).read()
 
     soup = bs4.BeautifulSoup(html, 'html.parser')
