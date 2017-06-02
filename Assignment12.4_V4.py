@@ -1,9 +1,9 @@
-'''This programs opens a URL and searches through the html
-find the <span> tag and then locates the numbers within the tag
-finally it sums all the numbs and returns the total
+'''The program will ask for a URL and use urllib to read the HTML from the data files, 
+and parse the data, extracting numbers and compute the sum of the numbers in the file.
 
-Created for py4e Assignment Ch. 12, week 4
-Developed by Kyle DuBois'''
+Sample data: http://python-data.dr-chuck.net/comments_42.html (Sum=2553)
+
+Developed by Kyle DuBois, Version 1.0'''
 
 import urllib.request, urllib.parse, urllib.error
 import bs4
