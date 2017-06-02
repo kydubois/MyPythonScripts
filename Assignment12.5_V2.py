@@ -1,41 +1,41 @@
-'''Note - this code must run in Python 2.x and you must download
-http://python-data.dr-chuck.net/known_by_Fikret.html
-Practice position 3 and count 4. Will retrive name srquence:
-Fikret, Montgomery, Mhairade, Butchi, and Anayah'''
+'''Sample problem: Start at http://python-data.dr-chuck.net/known_by_Fikret.html 
+Find the link at position 3 (the first name is 1). Follow that link. Repeat this process 4 times. The answer is the last name that you retrieve.
+Sequence of names: Fikret Montgomery Mhairade Butchi Anayah 
+Last name in sequence: Anayah
+
+Week 4, Ch. 12, Assignment #2
+
+Version 1.3, Developed by Kyle DuBois.'''
 
 import urllib.request, urllib.parse, urllib.error
 import bs4
-import re
-
 
 url = input('Enter URL: ')
-count = input('Enter Count: ')
+count = input('Enter count: ')
 try:
-    cot = int(count)
+    cou = int(count)
 except:
-    print('Please enter a valid number')
     quit()
-position = input('Enter Position: ')
+position = input('Enter position: ')
 try:
     pos = int(position)
 except:
-    print('Please enter a valid number')
     quit()
 
-
-while i in range(cot):
+# loop through url a set number of time the user will input
+printcounter = 0
+for i in range(cou):
     html = urllib.request.urlopen(url).read()
-
     soup = bs4.BeautifulSoup(html, 'html.parser')
 
-    # Retrieve all of the anchor tags
+    # retrieve all the anchor tags
     tags = soup('a')
-    for tag in tags:
-        # Look at the parts of a tag
-        #print('TAG:',tag)
-        if tag == pos:
+    # looks for tag of first 3 urls
+    for tag in tags[:(pos)]:
+        # looks for third tag
+        if (printcounter == (pos - 1)):
             url = tag.get('href', None)
-            print('Retrieving: ',url)
+            print('Retrieving: ', url)
+            printcounter = 0
             continue
-        #print 'Contents:',tag.contents[0]
-        #print 'Attrs:',tag.attrs
+        printcounter +=1
