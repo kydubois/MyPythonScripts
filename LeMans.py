@@ -45,3 +45,4 @@ html = url.open()
 
 soup = bs4.BeautifulSoup(html, 'html.parser')
 
+tags = soup('h3')
