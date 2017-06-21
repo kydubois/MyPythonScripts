@@ -21,20 +21,22 @@ CREATE TABLE Team (
 
 CREATE TABLE Class (
   id  INTERGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-  name    TEXT UNIQUE
+  type    TEXT UNIQUE
 );
 
 CREATE TABLE Driver (
   id  INTERGER NOT NULLL PRIMARY KEY AUTOINCREMENT UNIQUE,
   team_id  INTEGER,
-  car_id  INTEGER,
-  make    TEXT UNIQUE
+  name    TEXT UNIQUE,
+  age  INREGER,
+  nationality  TEXT UNIQUE
 );
 
 CREATE TABLE Car (
   id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
   class_id  INTEGER,
-  name    TEXT UNIQUE
+  driver_id  INTEGER,
+  model    TEXT UNIQUE, make    TEXT, Engine    TEXT
 );
 ''')
 
