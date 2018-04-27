@@ -6,7 +6,7 @@ import time
 import ssl
 import sys
 
-api_key = '# Put your own Google Maps Geocoding API key here'
+api_key = # Put your own Google Maps Geocoding API key here
 
 serviceurl = "https://maps.googleapis.com/maps/api/geocode/json?"
 
