@@ -13,7 +13,7 @@ import time
 import ssl
 import sys
 
-api_key = '# Add your own Google Place Web Serivces API key here'
+api_key = # Add your own Google Place Web Serivces API key here
 
 serviceurl = 'https://maps.googleapis.com/maps/api/place/textsearch/json?'
 
