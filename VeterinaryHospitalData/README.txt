@@ -11,7 +11,8 @@ Once you have you API key you will need to place the key in PlaceSearch_Run1.py 
 To begin, you will need to run PlaceSearch_Run1.py.  Make sure to update the api_key with your own Google Places API key.  This script
 will extract the zip code line by line from the zips.csv file. It will then create a SQLite database.  It will also ping the google places
 api to search the select zip code for veterinary hospitals within a 20 meter radius.  Finally, all the veterinary hospitals that are 
-located will be stored in the newly created database.  
+located will be stored in the newly created database.  If you stop this script and rerun it, the program will connect to the databse and 
+check to see if a zip code has already been written to the database.  This way it will not duplicate any zip codes in the database.
 
 Now run PlaceDump_Run2.py, this script will connect to that newly created database and extract all the hospitals details included the
 Google Places ID.  All the data will be written into a CSV file.
@@ -24,3 +25,6 @@ data in the new database table.
 Finally, run PlaceDetailsDump_Run4.py.  This program will connect to that newky created databse table and extract all the requested data.
 It will pull hospital name, address, phone, and googple places website information. It will finally write all the information into a 
 CSV file. 
+
+
+One final note, programs PlaceSearch_Run1.py and PlaceDetailsLoad.py only ping the API with 200 requests at a time in order to not overload the API.
