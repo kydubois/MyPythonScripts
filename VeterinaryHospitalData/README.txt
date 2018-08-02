@@ -27,4 +27,5 @@ It will pull hospital name, address, phone, and googple places website informati
 CSV file. 
 
 
-One final note, programs PlaceSearch_Run1.py and PlaceDetailsLoad.py only ping the API with 200 requests at a time in order to not overload the API.
+One final note, programs PlaceSearch_Run1.py and PlaceDetailsLoad.py only ping the API with 200 requests at a time in 
+order to not overload the API.
