@@ -90,4 +90,4 @@ for line in fh:
 
 
 cur.close()
-print("Run PlacesDump.py to read the data from the database and write it into a CSV file.")
+print("Run PlacesDump_Run2.py to read the data from the database and write it into a CSV file.")
