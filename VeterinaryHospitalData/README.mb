@@ -1,3 +1,5 @@
+# Veterinary Hospital Search with Google API
+
 These scripts use the Google Places API to serach for veterinary hosptials in a certain radius around an inputed zip code.
 They extract the hospital information and store the data in an SQLite database.  Then they use that data to pull Google Places details
 about each hospital.  The Places Details are also storeed in an SQLite database.  Finally, a script conencts to the database and 
