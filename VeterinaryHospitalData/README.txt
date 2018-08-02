@@ -1,7 +1,7 @@
 These scripts use the Google Places API to serach for veterinary hosptials in a certain radius around an inputed zip code.
 They extract the hospital information and store the data in an SQLite database.  Then they use that data to pull Google Places details
-about each hospital.  The Places Details are also storeed in an SQLite database.  Finally, a script conencts to the database and generates
-a CSV file of the veterianry hospital and its Goople Places Details.
+about each hospital.  The Places Details are also storeed in an SQLite database.  Finally, a script conencts to the database and 
+generates a CSV file of the veterianry hospital and its Goople Places Details.
 
 
 First, you need to create a Google Places API key which you will need to run PlaceSearch_Run1.py and PlaceDetailsLoad_Run3.py. 
@@ -9,22 +9,23 @@ You can create a Google API Key here https://console.developers.google.com/apis/
 Once you have you API key you will need to place the key in PlaceSearch_Run1.py and PlaceDetailsLoad_Run3.py.
 
 To begin, you will need to run PlaceSearch_Run1.py.  Make sure to update the api_key with your own Google Places API key.  This script
-will extract the zip code line by line from the zips.csv file. It will then create a SQLite database.  It will also ping the google places
-api to search the select zip code for veterinary hospitals within a 20 meter radius.  Finally, all the veterinary hospitals that are 
-located will be stored in the newly created database.  If you stop this script and rerun it, the program will connect to the databse and 
-check to see if a zip code has already been written to the database.  This way it will not duplicate any zip codes in the database.
+will extract the zip code line by line from the zips.csv file. It will then create a SQLite database.  It will also ping the google 
+places api to search the select zip code for veterinary hospitals within a 20 meter radius.  Finally, all the veterinary 
+hospitals that are located will be stored in the newly created database.  If you stop this script and rerun it, the program will 
+connect to the databse and check to see if a zip code has already been written to the database.  This way it will not duplicate 
+any zip codes in the database.
 
 Now run PlaceDump_Run2.py, this script will connect to that newly created database and extract all the hospitals details included the
 Google Places ID.  All the data will be written into a CSV file.
 
-After that, run PlaceDetailsLoad_Run3.py.  First the script will create a new database table.  Then, it will conenct to the newly created 
-CSV file of hospital information.  It will select the Google Places ID and then ping the Google Places API for a details search.  
-It will retrieve detailed information about each veterinary hospital based on the Google Places ID.  It will then store each hospitals
-data in the new database table.
+After that, run PlaceDetailsLoad_Run3.py.  First the script will create a new database table.  Then, it will conenct to the newly 
+created CSV file of hospital information.  It will select the Google Places ID and then ping the Google Places API for a 
+details search.  It will retrieve detailed information about each veterinary hospital based on the Google Places ID.  It will then 
+store each hospitals data in the new database table.
 
-Finally, run PlaceDetailsDump_Run4.py.  This program will connect to that newky created databse table and extract all the requested data.
-It will pull hospital name, address, phone, and googple places website information. It will finally write all the information into a 
-CSV file. 
+Finally, run PlaceDetailsDump_Run4.py.  This program will connect to that newky created databse table and extract all the 
+requested data. It will pull hospital name, address, phone, and googple places website information. It will finally write all 
+the information into a CSV file. 
 
 
 One final note, programs PlaceSearch_Run1.py and PlaceDetailsLoad.py only ping the API with 200 requests at a time in 
