@@ -92,5 +92,5 @@ with open('HospitalData.csv') as fh:
             print('Compiling Data...')
             time.sleep(5)
 
-print('There are a total of', tots, "Place Details in the database.  Run PlacesDetailsDump.py to write data from database into CSV file.")
+print('There are a total of', tots, "Place Details in the database.  Run PlaceDetailsDump_Run4.py to write data from database into CSV file.")
 cur.close()
