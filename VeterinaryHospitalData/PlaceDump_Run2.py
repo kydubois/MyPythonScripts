@@ -48,4 +48,4 @@ for col in cur:
 
 cur.close()
 fhand.close()
-print(count, "records written to CSV file.  Run PlacesDetailsLoad.py to read the CSV data to obtain the Place Details and write that into a database.")
+print(count, "records written to CSV file.  Run PlaceDetailsLoad_Run3.py to read the CSV data to obtain the Place Details and write them into a database.")
