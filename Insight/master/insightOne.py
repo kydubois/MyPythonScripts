@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS Orgs (
     data TEXT
 );
 ''')
-#
-# # create a new CSV file
+
+# create a new CSV file
 fhand = open(tagname + '_OrgsList_with_Emails.csv', 'w', newline='')
 csvfhand = csv.writer(fhand)
 csvfhand.writerow(['Hospital','Hospital Email','Hospital ID'])
