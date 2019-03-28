@@ -1,6 +1,8 @@
 '''
 Must run this script with api.py, bacth.py, abd init.py
 script located in Github repository published by pembo13/brightlocal
+
+Thsi script with retrieve all report and write associated information into a .CSV file
 '''
 
 import json
@@ -33,7 +35,7 @@ def testGetAllReports():
     print('Created Batch ID {}'.format(batch_id))
     csvfhand.writerow([batch_id,'','',''])
 
-    # Step 2: Make GET rewuest and retrieve results
+    # Step 2: Make GET request and retrieve results
     result = api.call(method='/v2/lsrc/get-all')
 
     pp = pprint.PrettyPrinter(indent=4)
