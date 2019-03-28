@@ -1,6 +1,7 @@
 '''
 Must run this script with api.py, bacth.py, abd init.py
 script located in Github repository published by pembo13/brightlocal
+'''
 
 import json
 import pprint
