@@ -43,8 +43,8 @@ def testGetLocations():
             pp.pprint(result)
             count += 1
 
-            if count == 1:
-                break
+#             if count == 1:
+#                 break
 
     return
 
