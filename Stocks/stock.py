@@ -1,7 +1,7 @@
 '''Programming Assignment 5: Stock Earnings Summary Using Classes
 
 
-Developed by Kyle DuBois. Version 1. Written 2/7/2020'''
+Developed by Kyle DuBois. Version 1.2. Written 2/7/2020'''
 
 from datetime import datetime
 from datetime import date 
